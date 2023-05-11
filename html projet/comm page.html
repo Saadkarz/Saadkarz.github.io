@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Community</title>
+	<link rel="shortcut icon" href="chat-conversation-svgrepo-com.png" type="image/x-icon">
+	<link rel="stylesheet"  href="comm page.css">
+
+</head>
+<body>
+	<video autoplay loop muted plays-inline class="vid">
+		<source src="Talking Stock Footage - Talking Free Stock Videos - blurr.mp4" type="video/mp4" >
+	  </video>
+	  
+	<div class="container">
+		<div1 class="container glass" ></div1>	
+		<header>
+			<h1>community page</h1>
+			<nav>
+				<ul>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="main.html">Games</a></li>
+					<li><a href="#">Community</a></li>
+					<li><a href="support.html" >Support</a></li>
+				</ul>
+			</nav>
+		</header>
+	<div class="container">
+		<h1>Leave a comment</h1>
+		<form id="comment-form" onsubmit="submitComment()">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+			<label for="comment">Comment:</label>
+			<textarea id="comment" name="comment" required></textarea>
+			<button type="submit">Submit</button>
+		</form>
+		<div id="comments"></div>
+	</div>
+	<script>
+        function submitComment() {
+  event.preventDefault();
+  let name = document.getElementById("name").value;
+  let comment = document.getElementById("comment").value;
+  let newComment = document.createElement("div");
+  newComment.className = "comment";
+  newComment.innerHTML = "<h3>" + name + "</h3><p> "  + comment + "</p>";
+  document.getElementById("comments").appendChild(newComment);
+  document.getElementById("comment-form").reset();
+}
+
+    </script>
+</body>
+</html>
